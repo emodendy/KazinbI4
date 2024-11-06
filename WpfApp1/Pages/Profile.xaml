@@ -1,0 +1,55 @@
+﻿<Page x:Class="WpfApp1.Pages.Profile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Profile">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        
+        <TextBlock Text="Профиль пользователя" FontSize="30"  HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Row="0"/>
+
+
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Width="400">
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Имя пользователя: " FontWeight="Bold" FontSize="16" />
+                <TextBlock x:Name="UsernameTextBlock" FontSize="16" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Дата регистрации: " FontWeight="Bold" FontSize="16" />
+                <TextBlock x:Name="RegistrationDateTextBlock" FontSize="16" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Баланс: " FontWeight="Bold" FontSize="16" />
+                <TextBlock x:Name="BalanceTextBlock" FontSize="16" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Telegram: " FontWeight="Bold" FontSize="16" />
+                <TextBlock x:Name="TelegramTextBlock" FontSize="16" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,15,0,5">
+                <TextBlock Text="Общая сумма ставок: " FontWeight="Bold" FontSize="16"/>
+                <TextBlock x:Name="TotalBetsTextBlock" FontSize="16" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                <TextBlock Text="Общая сумма выигрышей: " FontWeight="Bold" FontSize="16" />
+                <TextBlock x:Name="TotalWinsTextBlock" FontSize="16" />
+            </StackPanel>
+        </StackPanel>
+
+        
+
+        <Button Content="История" Width="150" Height="40" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,0" Grid.Row="2" Click="ReportButton_Click"/>
+        <Button Content="Назад" Width="150" Height="40" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="330,0,0,0" Grid.Row="2" Click="Button_Click"/>
+
+    </Grid>
+</Page>
